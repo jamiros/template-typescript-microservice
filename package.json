@@ -30,7 +30,7 @@
   "scripts": {
     "build": "tsc",
     "start": "set NODE_ENV=dev&& node ./bin/app.js",
-    "dev": "ts-node ./src/app.ts",
+    "dev": "yarn cache clean && yarn build && ts-node ./src/app.ts",
     "test": "set NODE_ENV=test&& jest"
   }
 }

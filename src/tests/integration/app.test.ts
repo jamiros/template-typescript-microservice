@@ -1,9 +1,9 @@
-import httpServer from '../../src/app';
+import app from '../../app';
 import request from 'supertest';
 
 describe("GET / - a simple api endpoint", () => {
     it("should return 200 OK", () => {
-        return request(httpServer)
+        return request(app)
         .get("/")
         .expect(200);
     });

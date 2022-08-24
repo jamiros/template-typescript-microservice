@@ -1,4 +1,4 @@
-/** source/server.ts */
+/** src/app.ts */
 import http from 'http';
 import express, { Express } from 'express';
 import morgan from 'morgan';
@@ -42,7 +42,7 @@ router.use((_req, res) => {
 });
 
 /** Server */
-const httpServer = http.createServer(router);
+const app = http.createServer(router);
 const PORT: any = port ?? 6060;
-httpServer.listen(PORT, () => console.log(`The server is running on port ${PORT}`));
-export default httpServer;
+app.listen(PORT, () => console.log(`The server is running on port ${PORT}`));
+export default app;
